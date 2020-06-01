@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="HealthAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71" y="93"/>
+        </scene>
+        <!--Device View Controller-->
+        <scene sceneID="05B-tU-UW6">
+            <objects>
+                <viewController storyboardIdentifier="DeviceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dkb-yR-RXF" customClass="DeviceViewController" customModule="HealthAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eng-Ta-O1l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2D-Rf-MWg">
+                                <rect key="frame" x="16" y="104" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-g3-n6p">
+                                <rect key="frame" x="16" y="140.5" width="382" height="705.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hGJ-PV-NwA" firstAttribute="trailing" secondItem="w2D-Rf-MWg" secondAttribute="trailing" constant="16" id="2gw-3H-dbr"/>
+                            <constraint firstItem="hGJ-PV-NwA" firstAttribute="trailing" secondItem="wPP-g3-n6p" secondAttribute="trailing" constant="16" id="E6R-69-QXx"/>
+                            <constraint firstItem="wPP-g3-n6p" firstAttribute="top" secondItem="w2D-Rf-MWg" secondAttribute="bottom" constant="16" id="he7-2c-kv2"/>
+                            <constraint firstItem="w2D-Rf-MWg" firstAttribute="top" secondItem="hGJ-PV-NwA" secondAttribute="top" constant="60" id="n03-lp-j0K"/>
+                            <constraint firstItem="hGJ-PV-NwA" firstAttribute="bottom" secondItem="wPP-g3-n6p" secondAttribute="bottom" constant="16" id="n37-LD-htb"/>
+                            <constraint firstItem="w2D-Rf-MWg" firstAttribute="leading" secondItem="hGJ-PV-NwA" secondAttribute="leading" constant="16" id="u3U-Q6-uLh"/>
+                            <constraint firstItem="wPP-g3-n6p" firstAttribute="leading" secondItem="hGJ-PV-NwA" secondAttribute="leading" constant="16" id="xdh-WE-b8i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hGJ-PV-NwA"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceTableView" destination="wPP-g3-n6p" id="YrQ-hR-SNi"/>
+                        <outlet property="setpCountLabel" destination="w2D-Rf-MWg" id="ZK4-7s-Exl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ri-82-7YR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="127"/>
+        </scene>
+        <!--Steps Details View Controller-->
+        <scene sceneID="1gW-2g-Rs2">
+            <objects>
+                <viewController storyboardIdentifier="StepsDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EhB-Sv-p7U" customClass="StepsDetailsViewController" customModule="HealthAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E2s-VS-eyS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfw-Ao-ihq">
+                                <rect key="frame" x="24" y="68" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwN-h2-3aY">
+                                <rect key="frame" x="24" y="112.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpX-fJ-pBa">
+                                <rect key="frame" x="24" y="157" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VpX-fJ-pBa" firstAttribute="leading" secondItem="QnO-NW-2Y1" secondAttribute="leading" constant="24" id="BRq-d2-P3S"/>
+                            <constraint firstItem="QnO-NW-2Y1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VpX-fJ-pBa" secondAttribute="trailing" symbolic="YES" id="Fyq-gf-WDW"/>
+                            <constraint firstItem="QnO-NW-2Y1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dfw-Ao-ihq" secondAttribute="trailing" symbolic="YES" id="IID-28-Rx1"/>
+                            <constraint firstItem="QnO-NW-2Y1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vwN-h2-3aY" secondAttribute="trailing" symbolic="YES" id="TzQ-sG-eBO"/>
+                            <constraint firstItem="dfw-Ao-ihq" firstAttribute="top" secondItem="QnO-NW-2Y1" secondAttribute="top" constant="24" id="VLW-do-RjO"/>
+                            <constraint firstItem="vwN-h2-3aY" firstAttribute="top" secondItem="dfw-Ao-ihq" secondAttribute="bottom" constant="24" id="ZRm-EQ-t3k"/>
+                            <constraint firstItem="dfw-Ao-ihq" firstAttribute="leading" secondItem="QnO-NW-2Y1" secondAttribute="leading" constant="24" id="cMs-po-VLN"/>
+                            <constraint firstItem="vwN-h2-3aY" firstAttribute="leading" secondItem="QnO-NW-2Y1" secondAttribute="leading" constant="24" id="en1-cS-Flu"/>
+                            <constraint firstItem="VpX-fJ-pBa" firstAttribute="top" secondItem="vwN-h2-3aY" secondAttribute="bottom" constant="24" id="gVJ-h2-ppg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QnO-NW-2Y1"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceInfoLabel" destination="dfw-Ao-ihq" id="Bu7-St-JMz"/>
+                        <outlet property="thisMonthStepsLabe" destination="VpX-fJ-pBa" id="phy-Dg-KKC"/>
+                        <outlet property="todaysStepsLabel" destination="vwN-h2-3aY" id="UFy-DG-8uh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUZ-TN-cSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="124"/>
+        </scene>
+    </scenes>
+</document>
