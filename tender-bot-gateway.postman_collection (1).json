@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "15c4231b-5ef8-4c4f-aeb6-1166326e96bb",
+		"name": "tender-bot-gateway",
+		"description": "all the APIs used in the frontend for the tender bot app.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6595347",
+		"_collection_link": "https://universal-eclipse-103298.postman.co/workspace/a259dd31-5bee-4678-96ac-2ba14aa8d1a1/collection/6595347-15c4231b-5ef8-4c4f-aeb6-1166326e96bb?action=share&source=collection_link&creator=6595347"
+	},
+	"item": [
+		{
+			"name": "health-check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{nonProdUrl}}",
+					"host": [
+						"{{nonProdUrl}}"
+					]
+				},
+				"description": "generic health check endpoint to check if the server is live.\n\nIt should respond with a JSON with one key/value pair."
+			},
+			"response": []
+		},
+		{
+			"name": "getResourceData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{nonProdUrl}}/api/v1/resource?resourceName=Metro&siteName=24/7&category=d",
+					"host": [
+						"{{nonProdUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"resource"
+					],
+					"query": [
+						{
+							"key": "resourceName",
+							"value": "Metro"
+						},
+						{
+							"key": "siteName",
+							"value": "24/7"
+						},
+						{
+							"key": "category",
+							"value": "d"
+						}
+					]
+				},
+				"description": "This api fetches the data stored in the database for each of the resources.  \n  \nresourceName values can be one of these -> Metro , Roads  \nsiteName values can be one of -> 24/7 , eprocure  \ncategory values can be one of -> a,b,c,d\n\nResponse format is in CSV and not json."
+			},
+			"response": []
+		},
+		{
+			"name": "getResourceStats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{nonProdUrl}}/api/v1/resource/stats?resourceName=Metro&siteName=eprocure",
+					"host": [
+						"{{nonProdUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"resource",
+						"stats"
+					],
+					"query": [
+						{
+							"key": "resourceName",
+							"value": "Metro"
+						},
+						{
+							"key": "siteName",
+							"value": "eprocure"
+						}
+					]
+				},
+				"description": "This API fetches the statistics for the different source and different keywords depending upon the inputs provided.\n\nThe different values that can be given for the inputs is same as above request.  \n  \nsample successful response :  \n{  \n\"data\": {  \n\"source\": \"eprocure\",  \n\"industry\": \"Metro\",  \n\"stats\": {  \n\"all\": 23,  \n\"New Tenders Today\": 0,  \n\"Tenders Expiring Today\": 2,  \n\"Tenders Expiring This Month\": 20  \n}  \n}  \n}"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localUrl",
+			"value": "http://localhost:7041",
+			"type": "string"
+		},
+		{
+			"key": "nonProdUrl",
+			"value": "https://tender-bot-client-gateway.onrender.com",
+			"type": "string"
+		},
+		{
+			"key": "ant",
+			"value": "dss",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
